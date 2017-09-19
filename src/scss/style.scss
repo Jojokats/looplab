@@ -1,8 +1,15 @@
 $bg-color:#333;
 $font-color:#fff;
 $primary-color:#008ed6;
-$dark-overlay: rgba(0,0,0,0.3);
-$font-size:1.8rem;
+$dark-overlay: rgba(0,0,0,0.8);
+$icon-size: 1.6rem;
+.pt-6,
+.py-6 {
+  padding-top: 4rem !important; }
+
+.pb-6,
+.py-6 {
+    padding-bottom: 4rem !important; }
 
 body{
   background:$bg-color;
@@ -11,14 +18,23 @@ body{
 
 .navbar{
   border-bottom:$primary-color 3px solid;
-  opacity:0.8;
+  opacity:0.9;
+  .navbar-brand span {
+    color: #ffc107;
+  }
+
+
+  .navbar-nav .nav-link:hover {
+    color: #ffc107;
+  }
 }
 
+
 #home-section{
-  background:url('../img/home.jpg') no-repeat;
+  background:url('../img/friends.jpg') no-repeat;
   background-size:cover;
   background-attachment:fixed;
-  min-height:700px;
+  min-height:800px;
 
   .dark-overlay{
     background-color:$dark-overlay;
@@ -26,7 +42,7 @@ body{
     top:0;
     left:0;
     width:100%;
-    min-height:700px;
+    min-height:800px;
   }
 
   .home-inner{
@@ -38,11 +54,77 @@ body{
   }
 
   .fa{
-    color:$primary-color;
-    background:#fff;
-    padding:4px;
-    border-radius:5px;
-    font-size:$font-size;
+    // color:$primary-color;
+    // background:#fff;
+    // padding:4px;
+    // border-radius:5px;
+    // font-size:$icon-size;
+    // margin-top: 6px;
+
+    color:#fff;
+    background: $primary-color;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
     margin-top: 6px;
+  }
+  .btn-outline-light:hover,
+  .btn-outline-light:active
+   {
+    color: #333;
+  }
+}
+
+#explore-section {
+  .fa {
+    color: #fff;
+    background: #333;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
+  }
+}
+
+#create-section {
+  .fa {
+    background: $primary-color;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
+  }
+}
+
+#share-section {
+  .fa {
+    color: #fff;
+    background: #333;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
+  }
+}
+
+#contactModal {
+  h5 {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 575px) {
+  #explore-head-section {
+      // margin-top: 5rem;
+      padding-top: 12rem;
+      padding-bottom: 5rem;
+  }
+}
+
+
+
+@media (min-width: 576px) {
+  #explore-head-section {
+      // margin-top: 5rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
   }
 }
